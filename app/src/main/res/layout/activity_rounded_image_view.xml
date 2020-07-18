@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".activities.RoundedImageView">
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
@@ -37,11 +37,42 @@
 <!--        </com.padcmyanmar.padcx.padc_x_recyclerview_ypst.veiws.Components.PrefixCustomEditText>-->
 
         <com.padcmyanmar.padcx.padc_x_recyclerview_ypst.veiws.Components.EmotionalFaceView
+            android:id="@+id/emotionalFaceView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_margin="24dp"
             >
 
         </com.padcmyanmar.padcx.padc_x_recyclerview_ypst.veiws.Components.EmotionalFaceView>
-    </LinearLayout>
+        <com.padcmyanmar.padcx.padc_x_recyclerview_ypst.veiws.Components.EmotionalFaceView
+            android:id="@+id/happyButton"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_alignParentStart="true"
+            android:layout_margin="8dp"
+            app:faceColor="#F18AAC"
+            app:borderColor="#ffffff"
+            app:eyesColor="#ffffff"
+            app:mouthColor="#ffffff"
+            app:state="happy"
+            >
+
+        </com.padcmyanmar.padcx.padc_x_recyclerview_ypst.veiws.Components.EmotionalFaceView>
+        <com.padcmyanmar.padcx.padc_x_recyclerview_ypst.veiws.Components.EmotionalFaceView
+            android:id="@+id/sadButton"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="8dp"
+            app:faceColor="#7FABB1"
+            app:borderColor="#0D0E0E"
+            app:eyesColor="#0D0E0E"
+            app:mouthColor="#0D0E0E"
+            app:state="sad"
+            >
+
+        </com.padcmyanmar.padcx.padc_x_recyclerview_ypst.veiws.Components.EmotionalFaceView>
+    </RelativeLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
