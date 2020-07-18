@@ -60,9 +60,18 @@ class EmotionalFaceView(context: Context?, attrs: AttributeSet?) : View(context,
 
 
     private fun drawMouth(canvas: Canvas) {
+        mouthPatch.reset()
+
         mouthPatch.moveTo(size*0.22f, size*0.7f )
-        mouthPatch.quadTo(size*0.50f,size*0.80f,size*0.78f,size*0.70f)
-        mouthPatch.quadTo(size*0.50f,size*0.90f,size*0.22f,size*0.70f)
+
+        if(happinessState == HAPPY){
+            mouthPatch.quadTo(size*0.50f,size*0.80f,size*0.78f,size*0.70f)
+            mouthPatch.quadTo(size*0.50f,size*0.90f,size*0.22f,size*0.70f)
+        }else{
+            mouthPatch.quadTo(size*0.50f,size*0.50f,size*0.78f,size*0.70f)
+            mouthPatch.quadTo(size*0.50f,size*0.60f,size*0.22f,size*0.70f)
+        }
+
         paint.color = mouthColor
         paint.style = Paint.Style.FILL
         canvas.drawPath(mouthPatch,paint)
