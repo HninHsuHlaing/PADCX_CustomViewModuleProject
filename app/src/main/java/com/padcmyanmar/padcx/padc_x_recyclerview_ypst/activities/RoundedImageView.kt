@@ -12,12 +12,12 @@ class RoundedImageView : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_rounded_image_view)
 
-        happyButton.setOnClickListener {
-            emotionalFaceView.happinessState = EmotionalFaceView.HAPPY
-        }
-        sadButton.setOnClickListener {
-            emotionalFaceView.happinessState = EmotionalFaceView.SAD
-        }
+//        happyButton.setOnClickListener {
+//            emotionalFaceView.happinessState = EmotionalFaceView.HAPPY
+//        }
+//        sadButton.setOnClickListener {
+//            emotionalFaceView.happinessState = EmotionalFaceView.SAD
+//        }
     }
 
 }
